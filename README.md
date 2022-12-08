@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Expense Tracker App
 
-Things you may want to cover:
+Backend Configuration
+ The app is bootstrapped using rails new command
 
-* Ruby version
+ To run the app after cloning, run bundle install then run rails server to start the server.
 
-* System dependencies
 
-* Configuration
+ The application contains four models and four tables, spendings which conatains, expected income and the budgeted income, expenses which contain expenses incurred in the period, incomes which contain the incomes collected during the period, and finally a users table containing the user details.
 
-* Database creation
+ A user can have many expenses and many incomes, but both incomes and expenses must belong to a user
 
-* Database initialization
 
-* How to run the test suite
+ The type of authentication used is json web tokens, where a token is generated and sent from the frontend with the headers to be verified, if no token or invalid token, som information cannot be retrieved.
 
-* Services (job queues, cache servers, search engines, etc.)
+ There are three resources containing all endpoints apart from show.
+ Other endpoints include, signup,login, getUsers for getting users and information related to them.
 
-* Deployment instructions
+ The backend is hosted in Google cloud platform using google app engine and postgresql instance, the hosted link to the backend is :
 
-* ...
+ The link to the frontend repository is : https://github.com/DanielGithumbi21/expense-tracker-frontend.git
+
