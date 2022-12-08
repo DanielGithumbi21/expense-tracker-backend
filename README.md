@@ -18,7 +18,17 @@ Backend Configuration
  There are three resources containing all endpoints apart from show.
  Other endpoints include, signup,login, getUsers for getting users and information related to them.
 
- The backend is hosted in Google cloud platform using google app engine and postgresql instance, the hosted link to the backend is :
 
  The link to the frontend repository is : https://github.com/DanielGithumbi21/expense-tracker-frontend.git
+
+ The link to the frontend hosted link is https://superlative-toffee-3b2424.netlify.app
+
+ The client side allowas you to enter the expexted budget and income, then afterwards you can add expenses or incomes and there is a dashboard comparing expense and incomes.
+
+ The frontend runs through vite (a vue package)
+
+ npm install
+ npm run dev
+
+ using material ui, bootstrap for ui.
 
