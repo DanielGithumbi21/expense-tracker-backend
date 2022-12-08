@@ -5,27 +5,27 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: railway
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: railway
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  username: "postgres"
-  password: "Daniel01"
-  database: "expensetracker"
-  host:   "/cloudsql/d-35528075"
+  <<: *default
+  url: postgresql://${{ postgres }}:${{ 5hPsqTUEijVMJCufWB4G}}@${{ containers-us-west-123.railway.app }}:${{ 6434 }}/${{ railway }}
+  database: railway
+  username: postgres
+  password: 5hPsqTUEijVMJCufWB4G
