@@ -25,7 +25,7 @@ test:
 
 production:
   <<: *default
-  url: postgresql://${{ postgres }}:${{ 5hPsqTUEijVMJCufWB4G}}@${{ containers-us-west-123.railway.app }}:${{ 6434 }}/${{ railway }}
+  url: postgresql://postgres:5hPsqTUEijVMJCufWB4G@containers-us-west-123.railway.app:6434/railway
   database: railway
   username: postgres
   password: 5hPsqTUEijVMJCufWB4G
