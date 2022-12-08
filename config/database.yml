@@ -14,7 +14,10 @@ default: &default
 
 development:
   <<: *default
+  url: postgresql://postgres:5hPsqTUEijVMJCufWB4G@containers-us-west-123.railway.app:6434/railway
   database: railway
+  username: postgres
+  password: 5hPsqTUEijVMJCufWB4G
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
